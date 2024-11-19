@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: phpinfo-helm-sebastian
+  name: phpinfo-helm-javinotfound
 spec:
   destination:
-    namespace: phpinfo-helm-sebastian
+    namespace: phpinfo-helm-javinotfound
     server: https://kubernetes.default.svc
   project: default
   source:
     path: master/course/dev/phpinfo/helm
-    repoURL: https://github.com/sebastian-colomar/openshift.git
+    repoURL: https://github.com/javinotfound/openshift.git
     targetRevision: HEAD
   syncPolicy:
     automated:
