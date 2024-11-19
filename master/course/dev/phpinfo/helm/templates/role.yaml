@@ -17,3 +17,10 @@ rules:
       - patch # Added because we need this role to make modifications 
     resources:
       - deployments
+# Added this apiGroup rule because we need grant to argocd can create rules
+  - apiGroups:
+      - route.openshift.io
+    verbs:
+      - create
+    resources:
+      - routes
