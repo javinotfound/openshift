@@ -1,4 +1,4 @@
-{{- if .Values.svc }}
+{{- if .Values.svc }} # First letter of Values should be uppercase. Check if svc exists.
 {{- range $v := .Values.svc -}}
 apiVersion: v1
 kind: Service
