@@ -1,3 +1,4 @@
+namespace: phpinfo-helm-javinotfound-2
 svc:
   - name: svc
     ports:
