@@ -14,5 +14,6 @@ rules:
       - apps
     verbs:
       - create
+      - patch # Added because we need this role to make modifications 
     resources:
       - deployments
