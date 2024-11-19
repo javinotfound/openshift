@@ -1,5 +1,5 @@
-{{- if .Values.svc }} # First letter of Values should be uppercase. Check if svc exists.
-{{- range $v := .Values.svc -}}
+{{- if .Values.svc }}
+{{- range $v := .Values.svc }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -8,5 +8,6 @@ spec:
   ports:
     {{- toYaml $v.ports | nindent 4 }}
   selector:
-  {{ toYaml $v.selector | indent 4 }}
+    {{- toYaml $v.selector | nindent 4 }}
+{{- end }}
 {{- end }}
