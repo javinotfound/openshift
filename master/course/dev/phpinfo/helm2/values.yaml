@@ -18,3 +18,7 @@ routes:
    to:
      kind: Service
      name: svc
+cm:
+  - name: cm
+    data:
+      index.php: <?php phpinfo();?>
