@@ -10,3 +10,11 @@ svc:
   #    - port: 6060
   #  selector:
   #    app: deploy2
+routes:
+ - name: route
+   tls:
+     insecureEdgeTerminationPolicy: Redirect
+     termination: edge
+   to:
+     kind: Service
+     name: svc
